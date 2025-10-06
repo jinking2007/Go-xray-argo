@@ -45,17 +45,17 @@ func loadConfig() *Config {
 		AutoAccess:   getEnvAsBool("AUTO_ACCESS", false), // 是否开启自动东保活,false关闭,true开启
 		FilePath:     getEnv("FILE_PATH", "./tmp"),       // 运行路径，sub.txt保存路径
 		SubPath:      getEnv("SUB_PATH", "sub"),          // 订阅路径,例如：https://google.com/sub
-		Port:         getEnv("SERVER_PORT", getEnv("PORT", "3000")), // http服务端口
-		UUID:         getEnv("UUID", "2faaf996-d2b0-440d-8258-81f2b05dd0e4"), // 哪吒v1在不同的平台部署需要修改
-		NezhaServer:  getEnv("NEZHA_SERVER", ""), // 哪吒v1填写形式：nz.abc.com:8008  哪吒v0填写形式：nz.abc.com
+		Port:         getEnv("SERVER_PORT", getEnv("PORT", "8080")), // http服务端口
+		UUID:         getEnv("UUID", "b99385da-8bc3-4092-8d49-5c3b836935ed"), // 哪吒v1在不同的平台部署需要修改
+		NezhaServer:  getEnv("NEZHA_SERVER", "nz.wfly81.dpdns.org:443"), // 哪吒v1填写形式：nz.abc.com:8008  哪吒v0填写形式：nz.abc.com
 		NezhaPort:    getEnv("NEZHA_PORT", ""),   // 哪吒v1留空此项，v0的agent端口
-		NezhaKey:     getEnv("NEZHA_KEY", ""),    // 哪吒v1的NZ_CLIENT_SECRET或v0的agent密钥
+		NezhaKey:     getEnv("NEZHA_KEY", "9HO9Dw2eZIoihXbTCaxbkF1HLvoqCO7c"),    // 哪吒v1的NZ_CLIENT_SECRET或v0的agent密钥
 		ArgoDomain:   getEnv("ARGO_DOMAIN", ""),  // 固定隧道域名，留空即启用临时隧道
 		ArgoAuth:     getEnv("ARGO_AUTH", ""),    // 固定隧道json或token，留空即启用临时隧道
 		ArgoPort:     getEnvAsInt("ARGO_PORT", 8001), // 固定隧道端口，使用token需要在cloudflare后台设置端口和这里一致
 		CFIP:         getEnv("CFIP", "www.visa.com.tw"), // 优选域名或优选ip
 		CFPort:       getEnvAsInt("CFPORT", 443),        // 优选域名或优选ip对应的端口
-		Name:         getEnv("NAME", "Vls"),             // 节点名称
+		Name:         getEnv("NAME", "Zeabur"),             // 节点名称
 	}
 }
 
